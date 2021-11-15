@@ -13,6 +13,6 @@ mongoose.connect('mongodb+srv://RawnakAraidy:Rawnak1996@cluster0.tnif8.mongodb.n
     console.log('conected to DB')
 })
 
-app.listen(process.env.PORT ||5000 , ()=>{
+app.listen(env.PORT ||5000 , ()=>{
     console.log('server on port 5000');
 })
