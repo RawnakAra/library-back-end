@@ -3,6 +3,7 @@ const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const { env } = require('process')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
@@ -12,6 +13,6 @@ mongoose.connect('mongodb+srv://RawnakAraidy:Rawnak1996@cluster0.tnif8.mongodb.n
     console.log('conected to DB')
 })
 
-app.listen(5000 , ()=>{
+app.listen(process.env.PORT ||5000 , ()=>{
     console.log('server on port 5000');
 })
