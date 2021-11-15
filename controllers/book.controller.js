@@ -44,7 +44,7 @@ const deleteABook = (req ,res) =>{
 const UpdateBook =(req,res)=>{
     const {id}=req.params;
     const {title,author,public,language,stars } = req.body
-  book.book.findByIdAndUpdate(id ,{title : title ,author : author ,public : public,language : language ,stars : stars},{new: true},(err ,data)=>{
+  book.book.findByIdAndUpdate(id ,{title : title ,author : author ,public : public,language : language ,stars : stars},{new: true, runValidators : true},(err ,data)=>{
       if(err) throw err 
       if(data){
           return res.status(201).send(data)

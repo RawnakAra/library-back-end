@@ -9,7 +9,7 @@ const bookSchema = new mongoose.Schema({
         //     validator: (v) => {
         //         return isAlpha(v)
         //     }
-        // },
+        // }
         // message: 'The title only on string'
     },
     author: {
