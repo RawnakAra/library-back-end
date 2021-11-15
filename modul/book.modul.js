@@ -4,23 +4,11 @@ let s = Math.floor(Math.random() * 5)
 const bookSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
-        // validate: {
-        //     validator: (v) => {
-        //         return isAlpha(v)
-        //     }
-        // }
-        // message: 'The title only on string'
+        required: true
     },
     author: {
         type: String,
-        required: true,
-        // validate: {
-        //     validator: (v) => {
-        //         return isAlpha(v)
-        //     }
-        // },
-        // message: 'The author name only on string'
+        required: true
     },
     public: {
         type: Number,
